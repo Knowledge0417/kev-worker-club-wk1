@@ -20,7 +20,7 @@ export default {
 				}
 			})
 		} else {
-			return new Response('ERROR Will Robinson! Please use the right method!  Your method was ' + request.method + 'request.  Try again.', {
+			return new Response('ERROR Will Robinson! Please use the right method!  Your method was ' + request.method + ' request.  Try again.', {
 				headers: {
 					'content-type': 'application/json'
 				}
