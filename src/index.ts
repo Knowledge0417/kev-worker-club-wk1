@@ -15,6 +15,8 @@ export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
 		if (request.method == "POST") {
 			return new Response.json('Look at you POSTing stuff!!')
+		} else {
+			return new Response.json('Error Worker! Wrong method')
 		}
 	},
 };
