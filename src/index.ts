@@ -14,6 +14,6 @@
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
 		return new Response('Hello World! from ' + request.url);
-		#Hello from Visual Studio Code!
+		// Hello from Visual Studio Code!
 	},
 };
