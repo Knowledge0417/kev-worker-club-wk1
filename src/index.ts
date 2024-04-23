@@ -14,17 +14,7 @@
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
 		if (request.method == "POST") {
-			return new Response('Look at you POSTing stuff!!', {
-				headers: {
-					'content-type': 'application/json',
-				}
-			})
-		} else {
-			return new Response('Error Worker! Wrong method', {
-				headers: {
-					'content-type': 'application/json',
-				}
-			})
+			return new Response.json('Look at you POSTing stuff!!')
 		}
 	},
 };
