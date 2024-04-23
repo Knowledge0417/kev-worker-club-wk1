@@ -13,8 +13,20 @@
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		console.log("Logging: " + request.url)
-		return new Response('Hello World! from ' + request.url + '. Have a nice day!');
+		if (request.url == "https://www.cloudflareworkers.com/test") {
+			return new Response('Hello Worker!', {
+				headers: {
+					'content-type': 'text/plain',
+				}
+			})
+		} else {
+			return new Response('Error Worker! Wrong URL', {
+				headers: {
+					'content-type': 'text/plain',
+				}
+			})
+		}
+		return new Response('Actual request is from ' + request.url + '. Have a nice day!');
 		// Hello from Visual Studio Code!
 	},
 };
