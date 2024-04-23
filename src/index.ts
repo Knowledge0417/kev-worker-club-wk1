@@ -13,10 +13,18 @@
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		if (request.method == "POST") {
-			return Response.json('Look at you POSTing stuff!!')
+		if (request.method == 'POST') {
+			return new Response('Look at you, POSTing stuff!', {
+				headers: {
+					'content-type': 'application/json',
+				}
+			})
 		} else {
-			return Response.json('Error Worker! Wrong method')
+			return new Response('ERROR Will Robinson! Please use the right method!', {
+				headers: {
+					'content-type': 'application/json'
+				}
+			})
 		}
 	},
 };
