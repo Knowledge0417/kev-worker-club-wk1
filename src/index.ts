@@ -13,6 +13,7 @@
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+		console.log("Logging: " + request.url)
 		return new Response('Hello World! from ' + request.url + '. Have a nice day!');
 		// Hello from Visual Studio Code!
 	},
