@@ -26,5 +26,11 @@ export default {
 				}
 			})
 		}
+		function getRandomInt(max) {
+			return Math.floor(Math.random() * max);
+		}
+
+		console.log(getRandomInt(4));
+		// Expected output of 0, 1, 2, 3 or 4
 	},
 };
