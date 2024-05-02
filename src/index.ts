@@ -12,7 +12,7 @@
  */
 
 export default {
-	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+	async fetch(request, env, ctx) {
 		// if (request.method == 'POST') {
 		// 	return new Response('Look at you, POSTing stuff!', {
 		// 		headers: {
