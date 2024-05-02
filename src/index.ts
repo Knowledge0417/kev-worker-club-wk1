@@ -13,19 +13,19 @@
 
 export default {
 	async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-		if (request.method == 'POST') {
-			return new Response('Look at you, POSTing stuff!', {
-				headers: {
-					'content-type': 'application/json',
-				}
-			})
-		} else {
-			return new Response('ERROR Will Robinson! Please use the right method!  Your method was ' + request.method + ' request.  Try again.', {
-				headers: {
-					'content-type': 'application/json'
-				}
-			})
-		}
+		// if (request.method == 'POST') {
+		// 	return new Response('Look at you, POSTing stuff!', {
+		// 		headers: {
+		// 			'content-type': 'application/json',
+		// 		}
+		// 	})
+		// } else {
+		// 	return new Response('ERROR Will Robinson! Please use the right method!  Your method was ' + request.method + ' request.  Try again.', {
+		// 		headers: {
+		// 			'content-type': 'application/json'
+		// 		}
+		// 	})
+		// }
 		function getRandomInt(max) {
 			return Math.floor(Math.random() * max);
 		  }
