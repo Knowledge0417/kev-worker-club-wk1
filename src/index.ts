@@ -31,5 +31,6 @@ export default {
 		  }
     	console.log(getRandomInt(4))
 		  // Expected output: 0, 1, 2 or 3
+		return new Response(getRandomInt(4))
 	},
 };
